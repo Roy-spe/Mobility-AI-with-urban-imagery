@@ -1,3 +1,3 @@
 #### Street-view and satellite images
 
-To download street-view and satellite images, first run $\bold{create\_coordinate\_file.ipynb}$, then run $\bold{GoogleMapAPI\_Downloading\_Imagery.ipynb}$.
+To download street-view and satellite images, first run create_coordinate_file.ipynb, then run GoogleMapAPI_Downloading_Imagery.ipynb.
