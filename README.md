@@ -150,6 +150,6 @@ Predictions from model trained by satellite images are more closer to the ground
 
 ### 4. Conclusion and Discussion
 
-1. Model trained by satellite images performs better than model trained by street view images. We guess this is because  the street view images lack representativeness and information so one street view image per FIPS may be not enough.
+(1) Model trained by satellite images performs better than model trained by street view images. We guess this is because  the street view images lack representativeness and information so one street view image per FIPS may be not enough.
 
-2. VGG16 is slightly better than AlexNet. It is reasonable because VGG16 has deeper layers than AlexNet so this model can better extract features. Also, VGG16 has smaller kernel sizes compared to AlexNet, which can reduce computational costs. 
+(2) VGG16 is slightly better than AlexNet. It is reasonable because VGG16 has deeper layers than AlexNet so this model can better extract features. Also, VGG16 has smaller kernel sizes compared to AlexNet, which can reduce computational costs. 
