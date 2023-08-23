@@ -4,13 +4,13 @@
 
 
 
-### Introduction
+### 1. Introduction
 
 This project is about using the satellite and street view images to train a CNN model in order to predict the median property value in California.
 
 
 
-### Timeline
+### 2. Timeline
 
 ###### Gather Information (week 1)
 
@@ -36,9 +36,9 @@ This project is about using the satellite and street view images to train a CNN 
 
 
 
-### Methods
+### 3. Methods
 
-##### Data Introduction
+##### (1) Data Introduction
 
 We downloaded the satellite images and street view images by using GoogleMapAPI. 
 
@@ -58,7 +58,7 @@ We first create and enable Google API key. Then we use geopanda to read the shap
 
 The name of the images: "No._FIPS" 
 
-##### Model Introduction
+##### (2) Model Introduction
 
 ###### AlexNet
 
@@ -82,7 +82,7 @@ Structure of VGG16:
 
 Same as AlexNet, we use the pretrained VGG16 model in this project and modify the out feature of the last layer of the model from 1000 to 1.
 
-##### Evaluation
+##### (3) Evaluation
 
 We use MSE and $R^2$ to evaluate the performance of the model. 
 
@@ -97,7 +97,7 @@ MSE means the average squared difference between the estimated values and the ac
 
 An R-Squared value shows how well the model predicts the outcome of the dependent variable. R-Squared values range from 0 to 1. An R-Squared value of 0 means that the model explains or predicts 0% of the relationship between the dependent and independent variables.
 
-##### Training
+##### (4) Training
 
 The hyperparameters we use when training are listed as follows:
 
@@ -118,9 +118,9 @@ The hyperparameters we use when training are listed as follows:
 
 
 
-### Results
+### 3. Results
 
-##### 1. MSE and $R^2$ value
+##### (1) MSE and $R^2$ value
 
 ![image-20230821040301715](./pic/value.png#pic_center)
 
@@ -130,7 +130,7 @@ The VGG model can have the lower MSE value and slightly higher $R^2$ value than 
 
 So based on the MSE and $R^2$ results, the VGG model trained by satellite images performs better than the other models.
 
-##### 2. Scatter Plots
+##### (2) Scatter Plots
 
 ![image-20230821041444144](./pic/scatter_plots.png#pic_center)
 
@@ -140,7 +140,7 @@ For the model trained by street view images, there are more dots fall in the red
 
 Since there are 9129 FIPS in the shapefile but only 8012 data in the census tract file, for the FIPS not in the census tract file, we set the value into 0. The predictions are not equal to 0, so when the ground truth is 0, the dots form into a straight line.
 
-##### 3. Visualization
+##### (3) Visualization
 
 ![image-20230821042633121](./pic/visualization.png#pic_center)
 
@@ -148,7 +148,7 @@ Predictions from model trained by satellite images are more closer to the ground
 
 
 
-### Conclusion and Discussion
+### 4. Conclusion and Discussion
 
 1. Model trained by satellite images performs better than model trained by street view images. We guess this is because  the street view images lack representativeness and information so one street view image per FIPS may be not enough.
 
