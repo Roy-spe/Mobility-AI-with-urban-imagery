@@ -44,15 +44,15 @@ We downloaded the satellite images and street view images by using GoogleMapAPI.
 
 - Satellite Images (9129)
 
-  <img src="./pic/satellite.png" alt="image-20230821035708358" style="zoom:50%;" />
+  <center><img src="./pic/satellite.png" alt="image-20230821035708358" width="70%" height="auto" /></center>
 
 - Street View Images (6440)
 
-  <img src="./pic/streetview.png" alt="image-20230821035723975" style="zoom:50%;" />
+  <center><img src="./pic/streetview.png" alt="image-20230821035723975" width="70%" height="auto" /></center>
 
 - Census Tract (8012)
 
-  <img src="./pic/census_tract.png" alt="image-20230821035741855" style="zoom:50%;" />
+  <center><img src="./pic/census_tract.png" alt="image-20230821035741855" width="20%" height="auto" /></center>
 
 We first create and enable Google API key. Then we use geopanda to read the shapefile and extract geoid, latitude and longitude to form the coordinate file. With the API key and the coordinate file, we use GoogleMapAPI to download images. 
 
@@ -66,7 +66,7 @@ It is a model designed by Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton. T
 
 The structure of the original Alexnet:
 
-<img src="./pic/alexnet_structure.png" alt="image-20230821033410474" style="zoom:33%;" />
+<center><img src="./pic/alexnet_structure.png" alt="image-20230821033410474" width="27%" height="auto" /></center>
 
 In this project, we use the Alexnet pretrained on ImageNet. Also, since we want the model to predict the specific value, we change the out features of the last layer of the model from 1000 to 1.
 
@@ -78,7 +78,7 @@ It was one of the most popular models submitted to ILSVRC-2014. It replaces the 
 
 Structure of VGG16:
 
-![image-20230821034303517](./pic/VGG16.png)
+![image-20230821034303517](./pic/VGG16.png#pic_center)
 
 Same as AlexNet, we use the pretrained VGG16 model in this project and modify the out feature of the last layer of the model from 1000 to 1.
 
@@ -86,7 +86,7 @@ Same as AlexNet, we use the pretrained VGG16 model in this project and modify th
 
 We use MSE and $R^2$ to evaluate the performance of the model. 
 
-<img src="./pic/formulation.png" alt="image-20230821034610913" style="zoom:35%;" />
+<center><img src="./pic/formulation.png" alt="image-20230821034610913" width="20%" height="auto" /></center>
 
 - MSE = mean squared error
 - R² = coefficient of determination
@@ -122,7 +122,7 @@ The hyperparameters we use when training are listed as follows:
 
 ##### 1. MSE and $R^2$ value
 
-![image-20230821040301715](./pic/value.png)
+![image-20230821040301715](./pic/value.png#pic_center)
 
 The model trained by satellite images can have the higher $R^2$ and lower MSE value than the model trained by street view images.
 
@@ -132,7 +132,7 @@ So based on the MSE and $R^2$ results, the VGG model trained by satellite images
 
 ##### 2. Scatter Plots
 
-![image-20230821041444144](./pic/scatter_plots.png)
+![image-20230821041444144](./pic/scatter_plots.png#pic_center)
 
 The scatter plots of ground truth median property value v.s. our predictions. The red line is y=x, which means the perfect predictor.
 
@@ -142,7 +142,7 @@ Since there are 9129 FIPS in the shapefile but only 8012 data in the census trac
 
 ##### 3. Visualization
 
-![image-20230821042633121](./pic/visualization.png)
+![image-20230821042633121](./pic/visualization.png#pic_center)
 
 Predictions from model trained by satellite images are more closer to the ground truth.  
 
