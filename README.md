@@ -6,7 +6,7 @@
 
 ### 1. Introduction
 
-This project is about using the satellite and street view images to train a CNN model in order to predict the median property value in California.
+High-resolution satellite images covering a significant portion of the Earth's surface have been accessible for more than a decade. More recently, sophisticated deep learning techniques have been employed to leverage these images. In this project, we use transfer learning techniques, starting with a Convolutional Neural Network (CNN) model pretrained on the ImageNet dataset, and then fine-tuning the model using satellite images to predict median property value.
 
 
 
@@ -143,8 +143,18 @@ Since there are 9129 FIPS in the shapefile but only 8012 data in the census trac
 ##### (3) Visualization
 
 ![image-20230821042633121](./pic/visualization.png#pic_center)
+This is Visualization of median property value in California, all the model can predict that places in San Francisco and Santa Clara and Los Angeles have higher median property value. Also, model trained by satellite images look more similar to the ground truth.
 
-Predictions from model trained by satellite images are more closer to the ground truth.  
+
+![image](https://github.com/Roy-spe/Mobility-AI-with-urban-imagery/assets/72426612/e966d5b2-2a4d-4a6b-b4e7-ab013c66154f)
+This is Visualization of median property value in Santa Clara county.
+
+
+![image](https://github.com/Roy-spe/Mobility-AI-with-urban-imagery/assets/72426612/f3be629d-ac90-4275-b03f-2bac75390f03)
+This is the census tracts around San Jose.
+
+
+To conclude, predictions from model trained by satellite images are more closer to the ground truth.  
 
 
 
