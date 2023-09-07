@@ -82,6 +82,16 @@ Structure of VGG16:
 
 Same as AlexNet, we use the pretrained VGG16 model in this project and modify the out feature of the last layer of the model from 1000 to 1.
 
+###### ResNet+attention
+
+![image](https://github.com/Roy-spe/Mobility-AI-with-urban-imagery/assets/72426612/e8edc146-b83d-4ecc-91d8-dd28cf13c5ef)
+
+Inspired by the human visual system, the attention mechanism enables models to selectively focus on relevant regions or features within an image, improving their ability to analyse, interpret, and extract meaningful information.
+
+![image](https://github.com/Roy-spe/Mobility-AI-with-urban-imagery/assets/72426612/fc5f33cb-945e-4586-aec9-9db6b8f8cbe7)
+
+
+
 ##### (3) Evaluation
 
 We use MSE and $R^2$ to evaluate the performance of the model. 
